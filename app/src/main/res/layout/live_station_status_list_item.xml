@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="7dp"
+    android:clipToPadding="false">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_train_number"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp"
+                android:text="64013"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_train_name"
+                android:layout_below="@+id/tv_train_number"
+                android:layout_marginLeft="15dp"
+                android:text="JIND JAKHAL PASSENGER"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_actual_label"
+                android:layout_below="@+id/tv_train_name"
+                android:layout_marginLeft="80dp"
+                android:text="Actual"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_sch_label"
+                android:layout_below="@+id/tv_train_name"
+                android:layout_marginLeft="140dp"
+                android:layout_toRightOf="@+id/tv_actual_label"
+                android:text="Scheduled"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_arr_label"
+                android:layout_below="@+id/tv_actual_label"
+                android:layout_marginLeft="15dp"
+                android:text="arr."/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_act_arr_val"
+                android:layout_below="@id/tv_actual_label"
+                android:layout_marginLeft="84sp"
+                android:text="44:44"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_sch_arr_val"
+                android:layout_below="@+id/tv_actual_label"
+                android:layout_marginLeft="280sp"
+                android:text="44:44"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_dep_label"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/tv_arr_label"
+                android:text="dep."/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_act_dep_val"
+                android:layout_below="@id/tv_arr_label"
+                android:layout_marginLeft="84sp"
+                android:text="44:44"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_sch_dep_val"
+                android:layout_below="@+id/tv_arr_label"
+                android:layout_marginLeft="280sp"
+                android:text="44:44"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_late_by_label"
+                android:layout_below="@+id/tv_dep_label"
+                android:layout_marginLeft="140sp"
+                android:text="Late by:"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_late_by_val"
+                android:layout_below="@+id/tv_dep_label"
+                android:layout_toRightOf="@+id/tv_late_by_label"
+                android:text="RIGHT TIME"/>
+
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

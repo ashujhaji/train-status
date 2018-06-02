@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.FareFragment">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/crdv_fare"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_fare_class_label"
+                android:text="Class"
+                android:padding="10dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_fare_class_val"
+                android:layout_toRightOf="@+id/tv_fare_class_label"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_rupee_sign"
+                android:paddingTop="10dp"
+                android:paddingRight="5dp"
+                android:layout_toLeftOf="@+id/tv_fare_val"
+                android:text="\u20B9"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_fare_val"
+                android:layout_alignParentRight="true"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:id="@+id/line_separator"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/tv_fare_class_label"
+                android:background="#A9A9A9	"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_base_fare_label"
+                android:layout_below="@+id/line_separator"
+                android:padding="10dp"
+                android:layout_alignParentLeft="true"
+                android:text="Base Fare"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_base_fare_val"
+                android:layout_below="@id/line_separator"
+                android:padding="10dp"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_resv_charge_label"
+                android:layout_below="@+id/tv_base_fare_label"
+                android:padding="10dp"
+                android:layout_alignParentLeft="true"
+                android:text="Reservation Charges"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_resv_charge_val"
+                android:layout_below="@id/tv_base_fare_val"
+                android:padding="10dp"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_superfast_charges_label"
+                android:layout_below="@+id/tv_resv_charge_label"
+                android:padding="10dp"
+                android:layout_alignParentLeft="true"
+                android:text="Superfast Charges"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_superfast_charges_val"
+                android:layout_below="@id/tv_resv_charge_val"
+                android:padding="10dp"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_other_charges_label"
+                android:layout_below="@+id/tv_superfast_charges_label"
+                android:padding="10dp"
+                android:layout_alignParentLeft="true"
+                android:text="Other Charges"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_other_charges_val"
+                android:layout_below="@id/tv_superfast_charges_val"
+                android:padding="10dp"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_gst_charge_label"
+                android:layout_below="@+id/tv_other_charges_label"
+                android:padding="10dp"
+                android:layout_alignParentLeft="true"
+                android:text="GST Charges"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_gst_charge_val"
+                android:layout_below="@id/tv_other_charges_val"
+                android:padding="10dp"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_total_fare_label"
+                android:padding="10dp"
+                android:layout_alignParentLeft="true"
+                android:text="Total Amount"
+                android:layout_alignParentBottom="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_total_fare_val"
+                android:padding="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

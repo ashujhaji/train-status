@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.FareDetailsFragment">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ti_fare_train_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium">
+
+
+        <io.tnine.trainstatus.Utils.DelayAutoCompleteTextView
+            android:id="@+id/acmtv_fair_train_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Train Code/Name"
+            android:imeOptions="flagNoExtractUi|actionSearch"
+
+            android:inputType="textCapSentences" />
+
+        <Button
+            android:id="@+id/btn_cancel_input_fare"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="-30dp"
+            android:background="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <ProgressBar
+            android:id="@+id/pb_loading_indicator_fare_train"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="-18dp"
+            android:visibility="gone" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_train_src_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ti_fare_train_code"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="5dp"
+        android:text="Source" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/spin_train_source"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tv_train_src_label"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center">
+
+    </android.support.v7.widget.AppCompatSpinner>
+
+    <TextView
+        android:id="@+id/tv_train_dest_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spin_train_source"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="5dp"
+        android:text="Destination" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/spin_train_dest"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tv_train_dest_label"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center">
+
+    </android.support.v7.widget.AppCompatSpinner>
+
+    <TextView
+        android:id="@+id/tv_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ti_fare_train_code"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="5dp"
+        android:text="Date" />
+
+    <EditText
+        android:id="@+id/et_fare_pick_date"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_date_label"
+        android:layout_marginRight="40dp"
+        android:clickable="true"
+        android:editable="false"
+        android:focusable="false" />
+
+    <TextView
+        android:id="@+id/tv_class_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/et_fare_pick_date"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="5dp"
+        android:text="Class" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/spin_train_class"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_class_label"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center">
+
+    </android.support.v7.widget.AppCompatSpinner>
+
+    <TextView
+        android:id="@+id/tv_quota_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spin_train_dest"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="5dp"
+        android:text="Quota" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/spin_train_quota"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tv_quota_label"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center">
+
+    </android.support.v7.widget.AppCompatSpinner>
+
+    <TextView
+        android:id="@+id/tv_age_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/spin_train_class"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="5dp"
+        android:text="Age" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/spin_age"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_age_label"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center">
+
+    </android.support.v7.widget.AppCompatSpinner>
+
+    <Button
+        android:id="@+id/btn_get_fare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spin_train_quota"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:text="Get Fare" />
+
+
+</RelativeLayout>

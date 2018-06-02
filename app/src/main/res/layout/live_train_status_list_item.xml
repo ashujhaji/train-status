@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+
+    <com.github.vipulasri.timelineview.TimelineView
+        android:id="@+id/time_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:markerSize="20dp"
+        app:lineSize="3dp"
+        app:line="@color/colorPrimary"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_vertical"
+        app:cardElevation="1dp"
+        app:contentPadding="15dp"
+        app:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_actual_label"
+                android:layout_marginLeft="60dp"
+                android:text="Actual"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_scheduled_label"
+                android:layout_toRightOf="@+id/tv_actual_label"
+                android:layout_marginLeft="110dp"
+                android:text="Scheduled"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_arr_label"
+                android:layout_below="@+id/tv_actual_label"
+                android:text="Arr."/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_dep_label"
+                android:layout_below="@+id/tv_arr_label"
+                android:text="Dep."/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_act_arr_val"
+                android:text="44:44"
+                android:layout_below="@+id/tv_actual_label"
+                android:layout_toRightOf="@id/tv_arr_label"
+                android:layout_marginLeft="40dp"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_sch_arr_val"
+                android:text="Source"
+                android:layout_below="@+id/tv_actual_label"
+                android:layout_toRightOf="@id/tv_act_arr_val"
+                android:layout_marginLeft="125dp"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_act_dep_val"
+                android:layout_below="@+id/tv_arr_label"
+                android:layout_toRightOf="@+id/tv_dep_label"
+                android:layout_marginLeft="33dp"
+                android:text="44:44"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_sch_dep_val"
+                android:layout_below="@+id/tv_arr_label"
+                android:layout_toRightOf="@+id/tv_act_dep_val"
+                android:layout_marginLeft="125dp"
+                android:text="44:44"/>
+
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv_dep_label"
+                android:id="@+id/tv_station_name"
+                android:textColor="@android:color/black"
+                tools:text="DELHI CANNT"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

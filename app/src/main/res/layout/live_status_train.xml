@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="io.tnine.trainstatus.Fragments.LiveTrainFragment">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/live_train_header"
+        android:background="@color/cardview_dark_background">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:id="@+id/tv_current_station"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center|left"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/cardview_light_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:id="@+id/tv_date"
+            android:textColor="@color/cardview_light_background"
+            android:layout_toRightOf="@+id/tv_current_station"
+            android:layout_alignParentRight="true"
+            android:paddingRight="20dp"
+            android:paddingLeft="10dp"
+            android:gravity="center|right" />
+
+    </RelativeLayout>
+
+  <android.support.v7.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/rv_live_train"
+      android:layout_below="@+id/live_train_header"
+      android:layout_marginLeft="10dp">
+  </android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>

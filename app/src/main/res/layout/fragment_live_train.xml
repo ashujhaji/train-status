@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:padding="10dp"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:id="@+id/ti_live_train_code">
+
+
+        <io.tnine.trainstatus.Utils.DelayAutoCompleteTextView
+            android:id="@+id/acmtv_live_train_code"
+            android:inputType="textCapSentences"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Train Code/Name"
+
+            android:imeOptions="flagNoExtractUi|actionSearch"/>
+
+        <Button
+            android:id="@+id/btn_cancel_input_live_train"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="-30dp"
+            android:background="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <ProgressBar
+            android:id="@+id/pb_loading_indicator_live_train"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="-18dp"
+            android:visibility="gone"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_pick_live_train_date"
+        android:layout_below="@+id/ti_live_train_code"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:editable="false"
+        android:focusable="false"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_get_live_status"
+        android:text="get live status"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/et_pick_live_train_date"
+        android:layout_centerInParent="true"/>
+
+
+
+
+
+</RelativeLayout>
