@@ -76,9 +76,33 @@ public class MainActivity extends AppCompatActivity
 
         apiInterface = ApiClient.getClient().create(ApiInterface.class);
 
+        mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
+        mFirebaseRemoteConfig.setDefaults(R.xml.remote_config_defaults);
+
+        long cacheExpiration = 0;
+        mFirebaseRemoteConfig.fetch(cacheExpiration)
+                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(MainActivity.this, "Fetch Succeeded",
+                                    Toast.LENGTH_SHORT).show();
+
+                            // After config data is successfully fetched, it must be activated before newly fetched
+                            // values are returned.
+                            mFirebaseRemoteConfig.activateFetched();
+
+                        } else {
+                            Toast.makeText(MainActivity.this, "Fetch Failed",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                        Config.myApiKey = mFirebaseRemoteConfig.getString("abcd");
+                        getSupportFragmentManager().beginTransaction().replace(R.id.content_main, homeFragment).commit();
+                    }
+                });
 
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.content_main, homeFragment).commit();
+//        getSupportFragmentManager().beginTransaction().replace(R.id.content_main, homeFragment).commit();
 
         Logger.addLogAdapter(new AndroidLogAdapter());
 
